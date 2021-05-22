@@ -1,0 +1,144 @@
+{
+    "Name": "payStatusAndReduce",
+    "Comment": "buy a goods on line, update pay status, deduct storage , add message",
+    "StartState": "UpdateOrderStatus",
+    "Version": "0.0.1",
+    "States": {
+        "UpdateOrderStatus": {
+            "Type": "ServiceTask",
+            "ServiceName": "orderStatusService",
+            "ServiceMethod": "updateOrderStatus",
+            "CompensateState": "CompensateOrderStatus",
+            "Next": "ChoiceOrderState",
+            "Input": [
+                "$.[businessKey]",
+                "$.[actionId]"
+            ],
+            "Output": {
+                "UpdateOrderStatusResult": "$.#root"
+            },
+            "Status": {
+                "#root == true": "SU",
+                "#root == false": "FA",
+                "$Exception{java.lang.Throwable}": "UN"
+            }
+        },
+        "ChoiceOrderState":{
+            "Type": "Choice",
+            "Choices":[
+                {
+                    "Expression":"[UpdateOrderStatusResult] == true",
+                    "Next":"ReduceKillStorage"
+                }
+            ],
+            "Default":"Fail"
+        },
+        "ReduceKillStorage": {
+            "Type": "ServiceTask",
+            "ServiceName": "killSpecPriceService",
+            "ServiceMethod": "updateKillSpecPrice",
+            "CompensateState": "CompensateKillSpecPrice",
+            "Next": "ChoiceKillStorageState",
+            "Input": [
+                "$.[businessKey]",
+                "$.[specGoodsId]",
+                {
+                    "throwException" : "$.[mockReduceKillStorageFail]"
+                }
+            ],
+            "Output": {
+                "ReduceKillStorageResult": "$.#root"
+            },
+            "Status": {
+                "#root == true": "SU",
+                "#root == false": "FA",
+                "$Exception{java.lang.Throwable}": "UN"
+            },
+            "Catch": [
+                {
+                    "Exceptions": [
+                        "java.lang.Throwable"
+                    ],
+                    "Next": "CompensationTrigger"
+                }
+            ]
+        },
+        "ChoiceKillStorageState":{
+            "Type": "Choice",
+            "Choices":[
+                {
+                    "Expression":"[ReduceKillStorageResult] == true",
+                    "Next":"AddMessageLog"
+                }
+            ],
+            "Default":"Fail"
+        },
+        "AddMessageLog": {
+            "Type": "ServiceTask",
+            "ServiceName": "saveMessageLogService",
+            "ServiceMethod": "saveMessageLog",
+            "CompensateState": "CompensateAddMessageLog",
+            "Input": [
+                "$.[messageLog]",
+                {
+                    "throwException" : "$.[mockAddMessageLogFail]"
+                }
+            ],
+            "Output": {
+                "AddMessageLogResult": "$.#root"
+            },
+            "Status": {
+                "#root == true": "SU",
+                "#root == false": "FA",
+                "$Exception{java.lang.Throwable}": "UN"
+            },
+            "Catch": [
+                {
+                    "Exceptions": [
+                        "java.lang.Throwable"
+                    ],
+                    "Next": "CompensationTrigger"
+                }
+            ],
+            "Next": "Succeed"
+        },
+        "CompensateOrderStatus": {
+            "Type": "ServiceTask",
+            "ServiceName": "orderStatusService",
+            "ServiceMethod": "compensateOrderStatus",
+            "Input": [
+                "$.[businessKey]",
+                "$.[actionId]"
+            ]
+        },
+        "CompensateKillSpecPrice": {
+            "Type": "ServiceTask",
+            "ServiceName": "killSpecPriceService",
+            "ServiceMethod": "compensateKillSpecPrice",
+            "Input": [
+                "$.[businessKey]",
+                "$.[specGoodsId]"
+            ]
+        },
+        "CompensateAddMessageLog": {
+            "Type": "ServiceTask",
+            "ServiceName": "saveMessageLogService",
+            "ServiceMethod": "compensateMessageLog",
+            "Input": [
+                "$.[messageLog]"
+            ]
+        },
+        "CompensationTrigger": {
+            "Type": "CompensationTrigger",
+            "Next": "Fail"
+        },
+        "Succeed": {
+            "Type":"Succeed"
+        },
+        "Fail": {
+            "Type":"Fail",
+            "ErrorCode": "PURCHASE_FAILED",
+            "Message": "purchase failed"
+        }
+    }
+}

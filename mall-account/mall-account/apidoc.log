@@ -1,0 +1,84 @@
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find java src paths:  [F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\]
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: found it a SPRING project, tell us if we are wrong.
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start find controllers in path : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : AccessTokenController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : AuthorizeController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : CommonController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : LoginController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : PersonalController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : SystemController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find controller file : UserController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : AccessTokenController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : AccessTokenController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : AuthorizeController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : AuthorizeController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : CommonController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : CommonController.java
+九月 09, 2020 10:01:31 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : LoginController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : LoginController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : PersonalController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : PersonalController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : SystemController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : SystemController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : UserController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : UserController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate api docs start...
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\AccessTokenController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\AccessTokenController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\AuthorizeController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\AuthorizeController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\CommonController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\CommonController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\LoginController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\LoginController.java
+九月 09, 2020 10:01:32 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\PersonalController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\PersonalController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\SystemController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\SystemController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\UserController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : F:\xiangxueedu\project\mall-springcloud\mall-account\src\main\java\cn\enjoy\sys\controller\UserController.java
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate index start !!!
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate index done !!!
+九月 09, 2020 10:01:33 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate api docs done !!!
